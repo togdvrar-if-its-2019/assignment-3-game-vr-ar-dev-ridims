@@ -512,7 +512,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0266762, y: -0.37586582, z: -10}
+  m_LocalPosition: {x: -1.1092281, y: -0.3898772, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3408,7 +3408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112785805}
   - component: {fileID: 2112785804}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3439,14 +3439,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 12.55938, y: 19.12157}
-      - {x: -87.562454, y: 19.136105}
-      - {x: -87.37998, y: -8.667485}
-      - {x: 1.486412, y: -8.835252}
-      - {x: 12.3918915, y: -8.698332}
-      - {x: 84.64149, y: -8.675873}
-      - {x: 84.6415, y: -7.0217037}
-      - {x: 84.59745, y: 19.304577}
+    - - {x: 12.518036, y: 19.157745}
+      - {x: -87.48012, y: 19.161053}
+      - {x: -87.47848, y: -8.835503}
+      - {x: 1.513977, y: -8.840764}
+      - {x: 12.531944, y: -8.851114}
+      - {x: 84.51708, y: -8.83165}
+      - {x: 84.5185, y: -8.820742}
+      - {x: 84.52372, y: -6.8548403}
+      - {x: 84.52357, y: -6.8406625}
+      - {x: 84.51838, y: 19.167248}
       - {x: 32.524445, y: 19.30618}
 --- !u!4 &2112785805
 Transform:

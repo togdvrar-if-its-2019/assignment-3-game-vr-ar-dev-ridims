@@ -107,8 +107,10 @@ public class CharacterController2D : MonoBehaviour {
 				}
 			}
 
-			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+            // ---------------------------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------------------
+            // Move the character by finding the target velocity 
+            Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
@@ -124,9 +126,11 @@ public class CharacterController2D : MonoBehaviour {
 				// ... flip the player.
 				Flip();
 			}
-		}
-		// If the player should jump...
-		if (m_Grounded && jump)
+            // ---------------------------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------------------
+        }
+        // If the player should jump...
+        if (m_Grounded && jump)
 		{
 			// Add a vertical force to the player.
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));

@@ -1,23 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour {
 
 	public CharacterController2D controller;
-
 	public Animator animator;
+    public Joystick joystick;
+    public Button m_jumpButton;
+
+    [Header("Control")]
+    public float sensitivity = .4f;
 
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
 
 	bool jump = false;
-	
-	// Update is called once per frame
-	void Update () {
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+    private void OnEnable()
+    {
+        m_jumpButton.onClick.AddListener(() => jumpButton());
+    }
+
+    private void jumpButton() {
+        Debug.Log("Im Clicked");
+        jump = true;
+        animator.SetBool("IsJumping", true);
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+        if (joystick.Horizontal >= sensitivity)
+        {
+            horizontalMove = runSpeed;
+        }
+        else if (joystick.Horizontal <= -sensitivity)
+        {
+            horizontalMove = -runSpeed;
+        }
+        else {
+            horizontalMove = 0f;
+        }
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -25,6 +51,12 @@ public class PlayerMovement : MonoBehaviour {
 			jump = true;
 			animator.SetBool("IsJumping", true);
 		}
+
+        //if (Input.GetMouseButtonDown(0)) {
+        //    Debug.Log("Im Clicked");
+        //    jump = true;
+        //    animator.SetBool("IsJumping", true);
+        //}
 	}
 
 	public void OnLanding(){

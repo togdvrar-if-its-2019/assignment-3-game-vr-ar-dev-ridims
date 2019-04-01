@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TriggerCoin : MonoBehaviour{
 
-    public GameObject Player;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == Player) {
+        if (collision.gameObject.tag == "Player") {
+            UpdateCoinAmount updateCoinAmount = FindObjectOfType<UpdateCoinAmount>();
+            updateCoinAmount.addCoin();
             Debug.Log("Coin Acquired");
             Destroy(this.gameObject);
         }

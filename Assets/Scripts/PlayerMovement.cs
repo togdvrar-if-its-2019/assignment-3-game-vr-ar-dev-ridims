@@ -33,17 +33,25 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (joystick.Horizontal >= sensitivity)
-        {
-            horizontalMove = runSpeed;
+        //pc control
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        if (Input.GetButtonDown("Jump")) {
+            jump = true;
+            animator.SetBool("IsJumping", true);
         }
-        else if (joystick.Horizontal <= -sensitivity)
-        {
-            horizontalMove = -runSpeed;
-        }
-        else {
-            horizontalMove = 0f;
-        }
+
+        //mobile control
+        //if (joystick.Horizontal >= sensitivity){
+        //    horizontalMove = runSpeed;
+        //}
+        //else if (joystick.Horizontal <= -sensitivity){
+        //    horizontalMove = -runSpeed;
+        //} else {
+        //    horizontalMove = 0f;
+        //}
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -51,12 +59,6 @@ public class PlayerMovement : MonoBehaviour {
 			jump = true;
 			animator.SetBool("IsJumping", true);
 		}
-
-        //if (Input.GetMouseButtonDown(0)) {
-        //    Debug.Log("Im Clicked");
-        //    jump = true;
-        //    animator.SetBool("IsJumping", true);
-        //}
 	}
 
 	public void OnLanding(){

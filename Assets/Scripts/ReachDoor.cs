@@ -6,7 +6,7 @@ using TMPro;
 
 public class ReachDoor : MonoBehaviour
 {
-    public GameObject panel, joystick, jumpButton;
+    public GameObject questionPanel, joystick, jumpButton, wrongAnswerPanel;
     public TMP_InputField inputField;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,7 +14,7 @@ public class ReachDoor : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Reach Goal");
-            panel.SetActive(true);
+            questionPanel.SetActive(true);
             joystick.SetActive(false);
             jumpButton.SetActive(false);
         }
@@ -24,17 +24,22 @@ public class ReachDoor : MonoBehaviour
         if (inputField.text == "8")
         {
             Debug.Log("Jawaban benar");
-            // SceneManager.LoadScene("Level2", LoadSceneMode.Single);
-            panel.SetActive(false);
+            SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+            questionPanel.SetActive(false);
             joystick.SetActive(true);
             jumpButton.SetActive(true);
         }
         else {
             Debug.Log("Jawaban salah");
-            panel.SetActive(false);
+            wrongAnswerPanel.SetActive(true);
+            questionPanel.SetActive(false);
             joystick.SetActive(true);
             jumpButton.SetActive(true);
         }
+    }
+
+    public void CloseWrongAnswerPanel() {
+        wrongAnswerPanel.SetActive(false);
     }
 
 }

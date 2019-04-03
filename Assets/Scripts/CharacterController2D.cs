@@ -14,13 +14,6 @@ public class CharacterController2D : MonoBehaviour {
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 
-    // ================
-    // My own code
-    // ================
-    [SerializeField] private GameObject m_TouchDeathZone;                       // Check whether player touch deathzone or not
-
-    // ================
-
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
@@ -50,7 +43,7 @@ public class CharacterController2D : MonoBehaviour {
 			OnCrouchEvent = new BoolEvent();
 	}
 
-	private void FixedUpdate()
+    private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;

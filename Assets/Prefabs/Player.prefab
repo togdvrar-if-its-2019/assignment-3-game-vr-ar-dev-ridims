@@ -240,8 +240,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8039585030283588628}
   animator: {fileID: 8039585030283588630}
-  joystick: {fileID: 0}
-  m_jumpButton: {fileID: 0}
+  joystick: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_jumpButton: {fileID: 8989854276551710861, guid: 5fafc6deb8f958f42b95f92687c01a58,
+    type: 3}
   sensitivity: 0.4
   runSpeed: 40
 --- !u!95 &8039585030283588630

@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemies
-  - Respawner
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -16,8 +14,8 @@ TagManager:
   - 
   - 
   - Player
-  - Obstacle
-  - Confiner
+  - City
+  - Background
   - 
   - 
   - 
@@ -40,12 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 3414772011
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Foreground
-    uniqueID: 231042331
     locked: 0

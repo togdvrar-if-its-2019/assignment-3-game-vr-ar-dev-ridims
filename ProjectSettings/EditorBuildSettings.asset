@@ -7,11 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: b75cb79ff59b7824f8ebb993c3a5be42
+    guid: 15d12e90f7da917408d04ab754fa40a8
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/DialogueScene.unity
+    guid: f25489f81d5e0df45be054960df36572
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: 7f515f7548273654e8c7ffd82cb2a2e5
+    path: Assets/Scenes/MapScene.unity
+    guid: 8401317cda9f6614bb0ba3768196b1f9
   m_configObjects: {}
